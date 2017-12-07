@@ -1,0 +1,36 @@
+{
+  "name": "@alexlafroscia/tldr-alfred-workflow",
+  "version": "0.0.0",
+  "description": "Alfred workflow for TLDR docs",
+  "license": "MIT",
+  "author": {
+    "name": "Alex LaFroscia",
+    "email": "alex@lafroscia.com",
+    "url": "github.com/alexlafroscia"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "ava",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "workflow",
+    "alfy"
+  ],
+  "dependencies": {
+    "alfy": "^0.6.0"
+  },
+  "devDependencies": {
+    "alfy-test": "^0.3.0",
+    "ava": "^0.18.0"
+  }
+}
