@@ -12,6 +12,8 @@
     "node": ">=4"
   },
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "test": "ava",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
@@ -31,6 +33,10 @@
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
-    "ava": "^0.18.0"
+    "ava": "^0.18.0",
+    "eslint": "^4.12.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "prettier": "^1.9.1"
   }
 }
