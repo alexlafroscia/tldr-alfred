@@ -10,16 +10,18 @@ const url = `https://api.github.com/repos/tldr-pages/tldr/contents/pages/common/
 
 alfy
   .fetch(url)
-  .then(({ content, encoding }) => {
+  .then(payload => {
+    const { content, encoding } = payload;
     const markdown = new Buffer(content, encoding).toString('ascii');
 
-    const { examples } = parse(markdown);
+    const { name, examples } = parse(markdown);
     const filteredExamples = alfy.matches(search.join(' '), examples, 'code');
 
     alfy.output(
       filteredExamples.map(example => ({
         title: example.code,
         subtitle: example.description,
+        quicklookurl: `https://tldr.ostera.io/${name}`,
         text: {
           copy: example.code,
           largetype: markdown

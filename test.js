@@ -29,6 +29,7 @@ const PAYLOAD = {
 };
 const largetype =
   '# ember\n\n> The Ember.js command line utility.\n> Used for creating and maintaining Ember.js applications.\n\n- Create a new Ember application:\n\n`ember new {{my_new_app}}`\n\n- Create a new Ember addon:\n\n`ember addon {{my_new_addon}}`\n\n- Build the project:\n\n`ember build`\n\n- Run the development server:\n\n`ember serve`\n\n- Run the test suite:\n\n`ember test`\n\n- Run a blueprint to generate something like a route or component:\n\n`ember generate {{type}} {{name}}`\n\n- Install an ember-cli addon:\n\n`ember install {{name_of_addon}}`\n';
+const quicklookurl = 'https://tldr.ostera.io/ember';
 
 test('it can fetch all of the examples for a command', async t => {
   nock('https://api.github.com')
@@ -42,6 +43,7 @@ test('it can fetch all of the examples for a command', async t => {
     {
       title: 'ember new {{my_new_app}}',
       subtitle: 'Create a new Ember application:',
+      quicklookurl,
       text: {
         copy: 'ember new {{my_new_app}}',
         largetype
@@ -50,6 +52,7 @@ test('it can fetch all of the examples for a command', async t => {
     {
       title: 'ember addon {{my_new_addon}}',
       subtitle: 'Create a new Ember addon:',
+      quicklookurl,
       text: {
         copy: 'ember addon {{my_new_addon}}',
         largetype
@@ -58,6 +61,7 @@ test('it can fetch all of the examples for a command', async t => {
     {
       title: 'ember build',
       subtitle: 'Build the project:',
+      quicklookurl,
       text: {
         copy: 'ember build',
         largetype
@@ -66,6 +70,7 @@ test('it can fetch all of the examples for a command', async t => {
     {
       title: 'ember serve',
       subtitle: 'Run the development server:',
+      quicklookurl,
       text: {
         copy: 'ember serve',
         largetype
@@ -74,6 +79,7 @@ test('it can fetch all of the examples for a command', async t => {
     {
       title: 'ember test',
       subtitle: 'Run the test suite:',
+      quicklookurl,
       text: {
         copy: 'ember test',
         largetype
@@ -83,6 +89,7 @@ test('it can fetch all of the examples for a command', async t => {
       title: 'ember generate {{type}} {{name}}',
       subtitle:
         'Run a blueprint to generate something like a route or component:',
+      quicklookurl,
       text: {
         copy: 'ember generate {{type}} {{name}}',
         largetype
@@ -91,6 +98,7 @@ test('it can fetch all of the examples for a command', async t => {
     {
       title: 'ember install {{name_of_addon}}',
       subtitle: 'Install an ember-cli addon:',
+      quicklookurl,
       text: {
         copy: 'ember install {{name_of_addon}}',
         largetype
@@ -111,6 +119,7 @@ test('it can filter the examples for a command', async t => {
     {
       title: 'ember new {{my_new_app}}',
       subtitle: 'Create a new Ember application:',
+      quicklookurl,
       text: {
         copy: 'ember new {{my_new_app}}',
         largetype
@@ -119,6 +128,7 @@ test('it can filter the examples for a command', async t => {
     {
       title: 'ember addon {{my_new_addon}}',
       subtitle: 'Create a new Ember addon:',
+      quicklookurl,
       text: {
         copy: 'ember addon {{my_new_addon}}',
         largetype
