@@ -22,6 +22,7 @@ Continue typing to filter the results by the contents of the code example.
 
 - Pressing `CMD-C` on a result will copy the code example to the keyboard
 - Pressing `CMD-L` on any of the results will show the full Markdown description of the command
+- Pressing `CMD-Y` on any of the results will show the TLDR webpage for the command in the Quicklook window
 
 ## FAQ
 
