@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --global alfred-@alexlafroscia/tldr-alfred-workflow
+$ npm install --global @alexlafroscia/tldr-alfred-workflow
 ```
 
 *Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
@@ -14,8 +14,9 @@ $ npm install --global alfred-@alexlafroscia/tldr-alfred-workflow
 
 ## Usage
 
-In Alfred, type `tldr`, <kbd>Enter</kbd>, and your query.
+In Alfred, type `tldr` followed by the name of a command you want to search for, such as `man`.
 
+Continue typing to filter the results by the contents of the code example.
 
 ## License
 
