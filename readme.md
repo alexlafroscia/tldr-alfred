@@ -2,6 +2,7 @@
 
 > Alfred workflow for TLDR docs
 
+![Screenshot](./docs/screenshot.png)
 
 ## Install
 
