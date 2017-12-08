@@ -29,14 +29,16 @@
     "alfy"
   ],
   "dependencies": {
-    "alfy": "^0.6.0"
+    "alfy": "^0.6.0",
+    "tldr": "^3.1.1"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
-    "ava": "^0.18.0",
+    "ava": "0.24.0",
     "eslint": "^4.12.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "nock": "^9.1.4",
     "prettier": "^1.9.1"
   }
 }
