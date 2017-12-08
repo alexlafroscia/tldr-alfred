@@ -7,9 +7,10 @@ const tokens = alfy.input.split(' ');
 const [command, ...search] = tokens;
 
 const url = `https://api.github.com/repos/tldr-pages/tldr/contents/pages/common/${command}.md?ref=master`;
+const maxAge = 5 * 1000 * 60; // 5 minutes
 
 alfy
-  .fetch(url)
+  .fetch(url, { maxAge })
   .then(payload => {
     const { content, encoding } = payload;
     const markdown = new Buffer(content, encoding).toString('ascii');
