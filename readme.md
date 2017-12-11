@@ -34,11 +34,15 @@ Continue typing to filter the results by the contents of the code example.
 - Pressing `CMD-L` on any of the results will show the full Markdown description of the command
 - Pressing `CMD-Y` on any of the results will show the TLDR webpage for the command in the Quicklook window
 
+### Authenticating
+
+If you want to (especially if you're running into rate limiting issues) you can provide your Github username and personal API token to authenticate your requests. You can [set environment variables](https://www.alfredapp.com/help/workflows/script-environment-variables/) called `username` and `password`, with the former being your Github username and the latter being a [personal access token](https://github.com/blog/1509-personal-api-tokens) that you can generate [here](https://github.com/settings/tokens).
+
 ## FAQ
 
 ### Q: I'm getting an error about rate limiting? What's going on?
 
-I noticed during development that after hitting their API repeatedly, Github started sending `403` responses. If you wait a bit, you should be able to make requests again.
+I noticed during development that after hitting their API repeatedly, Github started sending `403` responses. If you wait a bit, you should be able to make requests again. Alternatively, try setting a username/password as detailed above.
 
 ## License
 
