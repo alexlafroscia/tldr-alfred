@@ -17,7 +17,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["test.js", "tests/**/*.js"],
+      files: ["test/**/*.js"],
       parserOptions: {
         ecmaVersion: 2017,
         sourceType: 'module'

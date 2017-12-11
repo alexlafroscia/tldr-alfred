@@ -14,7 +14,9 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "test": "ava",
+    "test": "NODE_ENV=test ava",
+    "cache:clear": "./bin/clear-cache.sh",
+    "cache:view": "./bin/view-cache.sh",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },
