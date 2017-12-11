@@ -1,5 +1,5 @@
 import test from 'ava';
-import alfyTest from 'alfy-test';
+import run from './';
 import nock from 'nock';
 
 const PAYLOAD = {
@@ -31,13 +31,20 @@ const largetype =
   '# ember\n\n> The Ember.js command line utility.\n> Used for creating and maintaining Ember.js applications.\n\n- Create a new Ember application:\n\n`ember new {{my_new_app}}`\n\n- Create a new Ember addon:\n\n`ember addon {{my_new_addon}}`\n\n- Build the project:\n\n`ember build`\n\n- Run the development server:\n\n`ember serve`\n\n- Run the test suite:\n\n`ember test`\n\n- Run a blueprint to generate something like a route or component:\n\n`ember generate {{type}} {{name}}`\n\n- Install an ember-cli addon:\n\n`ember install {{name_of_addon}}`\n';
 const quicklookurl = 'https://tldr.ostera.io/ember';
 
-test('it can fetch all of the examples for a command', async t => {
+test.beforeEach(() => {
+  nock.disableNetConnect();
+
   nock('https://api.github.com')
     .get('/repos/tldr-pages/tldr/contents/pages/common/ember.md?ref=master')
     .reply(200, PAYLOAD);
+});
 
-  const alfy = alfyTest();
-  const result = await alfy('ember');
+test.afterEach(() => {
+  nock.enableNetConnect();
+});
+
+test('it can fetch all of the examples for a command', async t => {
+  const result = await run('ember');
 
   t.deepEqual(result, [
     {
@@ -108,12 +115,7 @@ test('it can fetch all of the examples for a command', async t => {
 });
 
 test('it can filter the examples for a command', async t => {
-  nock('https://api.github.com')
-    .get('/repos/tldr-pages/tldr/contents/pages/common/ember.md?ref=master')
-    .reply(200, PAYLOAD);
-
-  const alfy = alfyTest();
-  const result = await alfy('ember new');
+  const result = await run('ember new');
 
   t.deepEqual(result, [
     {
