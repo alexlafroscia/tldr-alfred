@@ -36,7 +36,7 @@ function allSettled(promises) {
 function fetchResults(url, options) {
   return alfy.fetch(url, options).then(payload => {
     const { content, encoding } = payload;
-    const markdown = new Buffer(content, encoding).toString('ascii');
+    const markdown = Buffer.from(content, encoding).toString('ascii');
     const { name, examples } = parse(markdown);
 
     return examples.map(example => ({
