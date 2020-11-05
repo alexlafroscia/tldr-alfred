@@ -1,6 +1,6 @@
 {
   "name": "@alexlafroscia/tldr-alfred-workflow",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "description": "Alfred workflow for TLDR docs",
   "license": "MIT",
   "author": {
