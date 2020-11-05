@@ -1,8 +1,8 @@
-import test from "ava";
-import run from "../";
-import nock from "nock";
+const test = require("ava");
+const nock = require("nock");
 
-import { payload, largetype, quicklookurl } from "./fixtures/ember";
+const run = require("../");
+const { payload, largetype, quicklookurl } = require("./fixtures/ember");
 
 test.beforeEach(() => {
   nock.disableNetConnect();
