@@ -1,4 +1,4 @@
-# @alexlafroscia/tldr-alfred-workflow
+# @alexlafroscia/tldr-alfred-workflow [![CI](https://github.com/alexlafroscia/tldr-alfred/workflows/CI/badge.svg)](https://github.com/alexlafroscia/tldr-alfred/actions?query=workflow%3ACI)
 
 > Alfred workflow for TLDR docs
 
