@@ -20,7 +20,7 @@ cd tldr-alfred
 yarn install # Or `npm install` if you don't have yarn
 ```
 
-*Requires [Node.js](https://nodejs.org) 8+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
+*Requires [Node.js](https://nodejs.org) 10+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
 
 ## Usage
 
