@@ -1,4 +1,4 @@
-# @alexlafroscia/tldr-alfred-workflow [![Build Status](https://travis-ci.org/alexlafroscia/tldr-alfred.svg?branch=master)](https://travis-ci.org/alexlafroscia/tldr-alfred)
+# @alexlafroscia/tldr-alfred-workflow
 
 > Alfred workflow for TLDR docs
 
